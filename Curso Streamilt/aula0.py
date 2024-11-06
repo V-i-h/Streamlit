@@ -12,6 +12,7 @@ response = requests.get(url)
 # json
 # dicionario
 
+
 df = pd.DataFrame.from_dict(response.json())
 if st.button("todos"):
     st.dataframe(df)
@@ -21,6 +22,7 @@ if st.button("todos"):
     st.metric("Quantidade de variaveis (colunas)",df.shape[1])
     st.dataframe(df)
     st.snow
+    
     
 else:
     st.write("Clique no botão todos")
